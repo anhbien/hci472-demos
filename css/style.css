@@ -2,99 +2,138 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&family=Lora:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
 
 /* Font Gothic */
-.font-gothic{
+.gothic-h1,
+.gothic-h2,
+.gothic-h3,
+.gothic-h4,
+.gothic-body,
+.gothic-emphasize,
+.gothic-link {
   font-family: 'Gothic A1', sans-serif;
 }
-.gothic-h1{
+
+.gothic-h1 {
   font-weight: 100;
   font-size: 2.5rem;
 }
-.gothic-h2{
+
+.gothic-h2 {
   font-weight: 100;
   font-size: 2rem;
 }
-.gothic-h3{
+
+.gothic-h3 {
   font-weight: 200;
   font-size: 1.75rem;
 }
-.gothic-h4{
+
+.gothic-h4 {
   font-weight: 300;
   font-size: 1.5rem;
 }
-.gothic-body{
+
+.gothic-body {
   font-weight: 400;
 }
-.gothic-emphasize{
+
+.gothic-emphasize {
   font-weight: 500;
 }
-.gothic-link{
+
+.gothic-link {
   font-weight: 400;
 }
 
 /* Font Poppins */
-.font-poppins{
+.poppins-h1,
+.poppins-h2,
+.poppins-h3,
+.poppins-h4,
+.poppins-body,
+.poppins-emphasize,
+.poppins-link {
   font-family: 'Poppins', sans-serif;
 }
-.poppins-h1{
+
+.poppins-h1 {
   font-weight: 100;
   font-size: 2.5rem;
 }
-.poppins-h2{
+
+.poppins-h2 {
   font-weight: 100;
   font-size: 2rem;
 }
-.poppins-h3{
+
+.poppins-h3 {
   font-weight: 200;
   font-size: 1.75rem;
 }
-.poppins-h4{
+
+.poppins-h4 {
   font-weight: 300;
   font-size: 1.5rem;
 }
-.poppins-body{
-  font-weight: 400;
-}
-.poppins-emphasize{
-  font-weight: 500;
-}
-.poppins-link{
+
+.poppins-body {
   font-weight: 400;
 }
 
-/* Font Dancing Script */
-.font-dancingScript{
-  font-family: 'Dancing Script', cursive;
+.poppins-emphasize {
+  font-weight: 500;
 }
-.dancingScript-h1{
+
+.poppins-link {
+  font-weight: 400;
+}
+
+/* Font EB Garamond */
+.garamond-h1,
+.garamond-h2,
+.garamond-h3,
+.garamond-h4 {
+  font-family: 'EB Garamond', serif;
+}
+
+.garamond-h1 {
   font-weight: 400;
   font-size: 2.5rem;
 }
-.dancingScript-h2{
+
+.garamond-h2 {
   font-weight: 400;
   font-size: 2rem;
 }
-.dancingScript-h3{
+
+.garamond-h3 {
   font-weight: 400;
   font-size: 1.75rem;
 }
-.dancingScript-h4{
+
+.garamond-h4 {
   font-weight: 400;
   font-size: 1.5rem;
 }
 
 /* Font Lora */
-.font-lora{
+.lora-body,
+.lora-emphasize,
+.lora-link {
   font-family: 'Lora', serif;
 }
-.lora-body{
+
+.lora-body {
   font-weight: 400;
 }
-.lora-emphasize{
+
+.lora-emphasize {
   font-weight: 500;
 }
-.lora-link{
+
+.lora-link {
   font-weight: 400;
 }
