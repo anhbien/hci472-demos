@@ -1,2 +1,2 @@
 # hci472 Typography
-# Anh Bien
+Anh Bien
