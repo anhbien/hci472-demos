@@ -1,0 +1,100 @@
+/* Font face */
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&family=Lora:wght@400;500&display=swap');
+
+/* Font Gothic */
+.font-gothic{
+  font-family: 'Gothic A1', sans-serif;
+}
+.gothic-h1{
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+.gothic-h2{
+  font-weight: 100;
+  font-size: 2rem;
+}
+.gothic-h3{
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+.gothic-h4{
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.gothic-body{
+  font-weight: 400;
+}
+.gothic-emphasize{
+  font-weight: 500;
+}
+.gothic-link{
+  font-weight: 400;
+}
+
+/* Font Poppins */
+.font-poppins{
+  font-family: 'Poppins', sans-serif;
+}
+.poppins-h1{
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+.poppins-h2{
+  font-weight: 100;
+  font-size: 2rem;
+}
+.poppins-h3{
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+.poppins-h4{
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.poppins-body{
+  font-weight: 400;
+}
+.poppins-emphasize{
+  font-weight: 500;
+}
+.poppins-link{
+  font-weight: 400;
+}
+
+/* Font Dancing Script */
+.font-dancingScript{
+  font-family: 'Dancing Script', cursive;
+}
+.dancingScript-h1{
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+.dancingScript-h2{
+  font-weight: 400;
+  font-size: 2rem;
+}
+.dancingScript-h3{
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+.dancingScript-h4{
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* Font Lora */
+.font-lora{
+  font-family: 'Lora', serif;
+}
+.lora-body{
+  font-weight: 400;
+}
+.lora-emphasize{
+  font-weight: 500;
+}
+.lora-link{
+  font-weight: 400;
+}
