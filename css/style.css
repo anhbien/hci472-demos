@@ -10,6 +10,7 @@
 .gothic-h2,
 .gothic-h3,
 .gothic-h4,
+.gothic-h5,
 .gothic-body,
 .gothic-emphasize,
 .gothic-link {
@@ -18,34 +19,42 @@
 
 .gothic-h1 {
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 4.209rem;
 }
 
 .gothic-h2 {
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 3.157rem;
 }
 
 .gothic-h3 {
   font-weight: 200;
-  font-size: 1.75rem;
+  font-size: 2.369rem;
 }
 
 .gothic-h4 {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.777rem;
+}
+
+.gothic-h5 {
+  font-weight: 400;
+  font-size: 1.333rem;
 }
 
 .gothic-body {
   font-weight: 400;
+  font-size: 1rem;
 }
 
 .gothic-emphasize {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .gothic-link {
   font-weight: 400;
+  font-size: 1rem;
 }
 
 /* Font Poppins */
@@ -53,6 +62,7 @@
 .poppins-h2,
 .poppins-h3,
 .poppins-h4,
+.poppins-h5,
 .poppins-body,
 .poppins-emphasize,
 .poppins-link {
@@ -61,62 +71,76 @@
 
 .poppins-h1 {
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 4.209rem;
 }
 
 .poppins-h2 {
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 3.157rem;
 }
 
 .poppins-h3 {
   font-weight: 200;
-  font-size: 1.75rem;
+  font-size: 2.369rem;
 }
 
 .poppins-h4 {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.777rem;
+}
+
+.poppins-h5 {
+  font-weight: 400;
+  font-size: 1.333rem;
 }
 
 .poppins-body {
   font-weight: 400;
+  font-size: 1rem;
 }
 
 .poppins-emphasize {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .poppins-link {
   font-weight: 400;
+  font-size: 1rem;
 }
 
 /* Font EB Garamond */
 .garamond-h1,
 .garamond-h2,
 .garamond-h3,
-.garamond-h4 {
+.garamond-h4,
+.garamond-h5 {
   font-family: 'EB Garamond', serif;
 }
 
 .garamond-h1 {
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 4.209rem;
 }
 
 .garamond-h2 {
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 3.157rem;
 }
 
 .garamond-h3 {
   font-weight: 400;
-  font-size: 1.75rem;
+  font-size: 2.369rem;
 }
 
 .garamond-h4 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.777rem;
+}
+
+.garamond-h5 {
+  font-weight: 400;
+  font-size: 1.333rem;
 }
 
 /* Font Lora */
@@ -128,12 +152,15 @@
 
 .lora-body {
   font-weight: 400;
+  font-size: 1rem;
 }
 
 .lora-emphasize {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .lora-link {
   font-weight: 400;
+  font-size: 1rem;
 }
