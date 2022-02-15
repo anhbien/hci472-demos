@@ -3078,9 +3078,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Final_atlas_1.png", id:"Final_atlas_1"},
-		{src:"images/Final_atlas_2.png", id:"Final_atlas_2"},
-		{src:"images/Final_atlas_3.png", id:"Final_atlas_3"}
+		{src:"../images/Final_atlas_1.png", id:"Final_atlas_1"},
+		{src:"../images/Final_atlas_2.png", id:"Final_atlas_2"},
+		{src:"../images/Final_atlas_3.png", id:"Final_atlas_3"}
 	],
 	preloads: []
 };
