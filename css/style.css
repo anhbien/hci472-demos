@@ -164,3 +164,10 @@
   font-weight: 400;
   font-size: 1rem;
 }
+
+/* Animation canvas */
+#canvas,
+#dom_overlay_container,
+#animation_container {
+  width: 100% !important;
+}

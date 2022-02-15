@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Anh Bien demos</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
+  <link rel="shortcut icon" href="../images/favicon.png">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet">
+  <style>
+    #animation_container {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  </style>
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="Final.js"></script>
+  <script>
+    var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+
+    function init() {
+      canvas = document.getElementById("canvas");
+      anim_container = document.getElementById("animation_container");
+      dom_overlay_container = document.getElementById("dom_overlay_container");
+      var comp = AdobeAn.getComposition("5390757A06C747D08E83502C4F2D1625");
+      var lib = comp.getLibrary();
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", function (evt) {
+        handleFileLoad(evt, comp)
+      });
+      loader.addEventListener("complete", function (evt) {
+        handleComplete(evt, comp)
+      });
+      var lib = comp.getLibrary();
+      loader.loadManifest(lib.properties.manifest);
+    }
+
+    function handleFileLoad(evt, comp) {
+      var images = comp.getImages();
+      if (evt && (evt.item.type == "image")) {
+        images[evt.item.id] = evt.result;
+      }
+    }
+
+    function handleComplete(evt, comp) {
+      //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+      var lib = comp.getLibrary();
+      var ss = comp.getSpriteSheet();
+      var queue = evt.target;
+      var ssMetadata = lib.ssMetadata;
+      for (i = 0; i < ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+          "images": [queue.getResult(ssMetadata[i].name)],
+          "frames": ssMetadata[i].frames
+        })
+      }
+      exportRoot = new lib.Final();
+      stage = new lib.Stage(canvas);
+      stage.enableMouseOver();
+      //Registers the "tick" event listener.
+      fnStartAnimation = function () {
+        stage.addChild(exportRoot);
+        createjs.Ticker.framerate = lib.properties.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }
+      //Code to support hidpi screens and responsive scaling.
+      AdobeAn.makeResponsive(true, 'both', false, 1, [canvas, anim_container, dom_overlay_container]);
+      AdobeAn.compositionLoaded(lib.properties.id);
+      fnStartAnimation();
+    }
+  </script>
+</head>
+
+<body class="d-flex flex-column h-100" onload="init();">
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/Color.png" height="30" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/logo.html">Logo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../pages/animation.html">Animation</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Typographical Hierarchies
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="../pages/gothic.html">Gothic A1</a></li>
+                <li><a class="dropdown-item" href="../pages/poppins.html">Poppins</a></li>
+                <li><a class="dropdown-item" href="../pages/mixTypes.html">EB Garamond & Lora</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Begin page content -->
+  <main class="container-fluid">
+    <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:2500px; height:1407px; position: relative;">
+      <canvas id="canvas" width="2500" height="1407" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+      <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:2500px; height:1407px; position: absolute; left: 0px; top: 0px; display: block;">
+      </div>
+    </div>
+  </main>
+  <footer class="footer mt-auto py-3 bg-dark">
+    <div class="container">
+      <span class="text-light">Anh Bien - HCI 472</span>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+
+</body>
+
+</html>
