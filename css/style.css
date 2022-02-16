@@ -170,4 +170,5 @@
 #dom_overlay_container,
 #animation_container {
   width: 100% !important;
+  height: auto !important;
 }
